@@ -11,3 +11,5 @@ export const revisarPresupuseto = (presupuesto, restante) => {
 
     return clase;
 };
+
+export const convertiValor = (valor) => new Intl.NumberFormat().format(valor);

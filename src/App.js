@@ -24,11 +24,22 @@ function App() {
         // resta el presupuesto
         const presupuestoRestante = restante - gasto.cantidad;
         guardarRestante(presupuestoRestante);
-
         // resetear a false
         guardaCrearGasto(false);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [gasto]);
+
+    // Eliminar un gasto del state Gastos
+
+    const eliminarGasto = (id) => {
+        // libera presupuesto eliminado
+        const presupuestoR =
+            restante + gastos.filter((gasto) => gasto.id === id)[0].cantidad;
+        guardarRestante(presupuestoR);
+
+        const newGastos = gastos.filter((gasto) => gasto.id !== id);
+        guardarGastos(newGastos);
+    };
 
     return (
         <div className="container">
@@ -51,7 +62,7 @@ function App() {
                             </div>
 
                             <div className="one-half column">
-                                <Listado gastos={gastos} />
+                                <Listado gastos={gastos} eliminarGasto={eliminarGasto} />
                                 <ControlPresupuesto
                                     presupuesto={presupuesto}
                                     restante={restante}

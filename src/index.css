@@ -81,6 +81,7 @@ h2 {
 .gastos-realizados {
     margin-bottom: 2rem;
 }
+
 .gastos-realizados li {
     list-style: none;
     margin-bottom: 0rem;
@@ -90,14 +91,43 @@ h2 {
 .gastos-realizados li:last-of-type {
     margin-bottom: 0 !important;
 }
-.gastos-realizados li p {
+
+.gastos-realizados li {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0;
 }
+
+.gastos-realizados li p {
+    text-align: center;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
 .gastos-realizados li p .gasto {
+    background-color: #004085;
+    padding: 1rem 0.5rem;
+    color: white;
+}
+
+.gastos-realizados li .btn-gasto {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0.8rem 0 0;
+    color: red;
+    border: none;
+}
+
+/* .gastos-realizados li p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+} */
+
+/* .gastos-realizados li p .gasto {
     background-color: #004085;
     padding: 1rem;
     color: white;
 }
+ */

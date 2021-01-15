@@ -5,7 +5,7 @@ import shortid from 'shortid';
 const Formulario = ({ guardarGasto, guardaCrearGasto }) => {
     // Definir el state
     const [nombreGasto, actualizarNombre] = useState('');
-    const [cantidad, actualizarCantidad] = useState(0);
+    const [cantidad, actualizarCantidad] = useState('');
     const [error, actualizarError] = useState(false);
 
     // Funcion para guardar gasto
